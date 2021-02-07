@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BooksyActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/bookImageBig"
+                android:layout_width="130dp"
+                android:layout_height="210dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars"
+                android:scaleType="centerCrop"/>
+
+            <Button
+                android:id="@+id/btnWantToRead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:width="140dp"
+                android:text="Want To Read"
+                android:textAllCaps="false"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnAddFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Add to Favorite"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@+id/btnCurrentlyReading"
+                app:layout_constraintStart_toStartOf="@+id/btnCurrentlyReading"
+                app:layout_constraintTop_toBottomOf="@+id/btnCurrentlyReading"
+                android:width="140dp"
+                android:textSize="11sp"
+                />
+
+            <Button
+                android:id="@+id/btnCurrentlyReading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Currently Reading"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@+id/btnWantToRead"
+                app:layout_constraintStart_toStartOf="@+id/btnWantToRead"
+                app:layout_constraintTop_toBottomOf="@+id/btnWantToRead"
+                android:width="140dp"
+                android:textSize="11sp"/>
+
+            <Button
+                android:id="@+id/btnAlreadyRead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Already Read"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@+id/btnAddFavorite"
+                app:layout_constraintStart_toStartOf="@+id/btnAddFavorite"
+                app:layout_constraintTop_toBottomOf="@+id/btnAddFavorite"
+                android:width="140dp"
+                android:textSize="11sp"/>
+
+            <TextView
+                android:id="@+id/nameOfBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Crime and Punishment"
+                app:layout_constraintStart_toEndOf="@+id/nameLabel"
+                app:layout_constraintTop_toTopOf="@+id/nameLabel" />
+
+            <TextView
+                android:id="@+id/authorOfBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:text="F.M. Dostoevsky"
+                app:layout_constraintStart_toEndOf="@+id/authorLabel"
+                app:layout_constraintTop_toBottomOf="@+id/nameOfBook" />
+
+            <TextView
+                android:id="@+id/numberOfPages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:text="400 "
+                app:layout_constraintStart_toEndOf="@+id/pagesLabel"
+                app:layout_constraintTop_toBottomOf="@+id/authorOfBook" />
+
+            <TextView
+                android:id="@+id/nameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="Name:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+            <TextView
+                android:id="@+id/pagesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:text="Pages:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/authorLabel" />
+
+            <TextView
+                android:id="@+id/labelDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:text="Description:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pagesLabel" />
+
+            <TextView
+                android:id="@+id/longDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:paddingRight="10dp"
+                android:text="Guy kills granny(and maybe not only her)"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelDesc" />
+
+            <TextView
+                android:id="@+id/authorLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:text="Author:"
+                app:layout_constraintEnd_toEndOf="@+id/nameLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="287dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
